@@ -4,7 +4,7 @@ import { Noise } from 'noisejs';
 const noise = new Noise();
 
 // ==== Fixed canvas size ====
-const WIDTH = 370;
+const WIDTH = 390;
 const HEIGHT = 710;
 
 let scene, camera, renderer;
