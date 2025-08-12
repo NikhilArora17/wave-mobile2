@@ -10,7 +10,7 @@ const HEIGHT = 710;
 let scene, camera, renderer;
 const lines = [];
 let lineCount = 20;
-let segmentCount = 100;
+let segmentCount = 120;
 
 let sharedLeftX = -WIDTH / 1.3;
 let sharedRightX = WIDTH / 1.3;
@@ -43,8 +43,8 @@ function init() {
   renderer.setClearColor(0xffffff, 0.05);
 
   const material = new THREE.PointsMaterial({
-    color: 0x6C6F7C,
-    size: 0.2,
+    color: 0x000000,
+    size: 0.3,
     sizeAttenuation: true,
     transparent: true,
     opacity: 0.4,
