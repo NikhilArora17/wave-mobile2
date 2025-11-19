@@ -5,8 +5,8 @@ const noise = new Noise();
 
 let scene, camera, renderer, canvas;
 const lines = [];
-let lineCount = 20;
-let segmentCount = 120;
+let lineCount = 12;
+let segmentCount = 70;
 
 // Derived from canvas size (set on init + resize)
 let WIDTH = 390;
@@ -50,10 +50,10 @@ function init() {
 
   const material = new THREE.PointsMaterial({
     color: 0x000000,
-    size: 0.3,
+    size: 0.4,
     sizeAttenuation: true,
     transparent: true,
-    opacity: 0.4,
+    opacity: 0.6,
     map: createCircleTexture(),
     alphaTest: 0.1,
     depthWrite: false,
@@ -169,7 +169,7 @@ function animate(time) {
     const distToCenter = Math.abs(cx);
     const fade = 1.0 - Math.min(distToCenter / maxDist, 1);
 
-    points.material.opacity = 0.15 + 0.35 * Math.sin(t * 4 + lineIndex * 0.4) * fade;
+    points.material.opacity = 0.35 + 0.45 * Math.sin(t * 5 + lineIndex * 0.4) * fade;
   });
 
   renderer.render(scene, camera);
